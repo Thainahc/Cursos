@@ -12,29 +12,43 @@
     <p>OOP JavaScript</p>
     <script>
         function Person() {
-            this.name;
-            this.age;
-            this.height;
+            var name
+            var age
+            var height
 
-            this.sayHello = function () {
-                console.log('Hello ' + this.name)
+            this.sayHello = function sayHello(name) {
+                console.log('Hello ' + name)
+            }
+
+            this.getName = function getName() {
+                return name
+            }
+
+            this.getAge = function(){
+                returnage
+            }
+
+            this.getHeight = function(){
+                return height
+            }
+
+            this.setName = function setName(_name) {
+                name = _name
+            }
+
+            this.setAge = function(_age){
+                age = _age
+            }
+
+            this.setHeight = function setHeight(_height){
+                height = _height
             }
         }
 
         var thaina = new Person()
-        thaina.name = "Thaina"
-        thaina.age = 20
-        thaina.height = 1.68
-        thaina.sayHello()
-
-        var joao = new Person()
-        joao.name = "Joao"
-        joao.age = 25
-        joao.height = 1.72
-        joao.sayHello()
+        thaina.sayHello(thaina.getName())
 
         console.log(thaina);
-        console.log(joao);
     </script>
 </body>
 
