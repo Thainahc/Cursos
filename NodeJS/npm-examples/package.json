@@ -1,0 +1,25 @@
+{
+  "name": "working-with-nmp",
+  "version": "1.0.0",
+  "description": "An example for how to use npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "how",
+    "to",
+    "use",
+    "npm",
+    "school",
+    "of",
+    "net"
+  ],
+  "author": "Thainá Helena Castro",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0"
+  },
+  "devDependencies": {}
+}

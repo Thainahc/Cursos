@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <script>
+        var number1 = 10.00 // toString = "10.00"
+
+        number1.toString()
+
+        var number2 = 10.20
+
+        number2 = parseInt(number2) // Pega o inteiro
+
+        alert(number2)
+
+        var number3 = '10.20'
+       
+        number3 = parseFloat(number3).toFixed(2) // Duas casas decimais
+
+        alert(number3)
+
+        var number4 = 10.40
+
+        number4 = parseFloat(number4).toPrecision(4) // Todas as casas
+
+        alert(number4)
+
+        var random1 = Math.random()
+
+        alert(random1)
+
+        var random2 = Math.round(Math.random() * 6)
+
+        alert(random2)
+
+        var random3 = Math.trunc(Math.random() * 6)
+
+        alert(random3)
+    </script>
+</body>
+
+</html>
