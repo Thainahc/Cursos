@@ -57,9 +57,25 @@
             return this.setAge(this.getAge() + 1)
         }
 
-        var thaina = new Person('Thainá', 20, 1.68)
+        function Employee(_name, _age, _height) {
+            var salary
+
+            Person.call(this, _name, _age, _height) // Herança
+
+            this.getSalary = function () {
+                return salary
+            }
+
+            this.setSalary = function (_salary) {
+                salary = _salary
+            }
+        }
+
+        Employee.prototype = Object.create(Person.prototype) // Herança
+
+        var thaina = new Employee('Thainá', 20, 1.68)
         console.log(thaina.getAge())
-        thaina.happyBirthday();
+        thaina.happyBirthday()
         console.log(thaina.getAge())
 
         console.log(thaina);
