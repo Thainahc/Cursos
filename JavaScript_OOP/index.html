@@ -74,11 +74,17 @@
         Employee.prototype = Object.create(Person.prototype) // Herança
 
         var thaina = new Employee('Thainá', 20, 1.68)
-        console.log(thaina.getAge())
+        console.log(thaina.getName(), thaina.getAge())
         thaina.happyBirthday()
-        console.log(thaina.getAge())
+        console.log(thaina.getName(), thaina.getAge())
 
-        console.log(thaina);
+        var joao = new Employee('João', 25, 1.72)
+        console.log(joao.getName(), joao.getAge())
+        joao.happyBirthday = function happyBirthday() { // Polimorfismo
+            return this.setAge(this.getAge() + 2)
+        }
+        joao.happyBirthday()
+        console.log(joao.getName(), joao.getAge())
     </script>
 </body>
 
