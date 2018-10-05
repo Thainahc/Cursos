@@ -11,10 +11,14 @@
 <body>
     <p>OOP JavaScript</p>
     <script>
-        function Person() {
-            var name
-            var age
-            var height
+        function Person(_name, _age, _height) {
+            var name = _name
+            var age = _age
+            var height = _height
+
+            this.initialize = function(){
+                console.log('Init person')
+            }
 
             this.sayHello = function sayHello(name) {
                 console.log('Hello ' + name)
@@ -55,10 +59,8 @@
 
         console.log(Person.static_attr)
 
-        var thaina = new Person()
-        thaina.setName("Thainá")
-        thaina.setAge("20")
-        thaina.setHeight("1.68")
+        var thaina = new Person('Thainá', 20, 1.68)
+        thaina.initialize();
         console.log(thaina.getName())
         console.log(thaina.getAge())
         console.log(thaina.getHeight())
