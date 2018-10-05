@@ -16,10 +16,6 @@
             var age = _age
             var height = _height
 
-            this.initialize = function(){
-                console.log('Init person')
-            }
-
             this.sayHello = function sayHello(name) {
                 console.log('Hello ' + name)
             }
@@ -57,13 +53,14 @@
 
         Person.static_attr = 'This is my first static attribute'
 
-        console.log(Person.static_attr)
+        Person.prototype.happyBirthday = function () {
+            return this.setAge(this.getAge() + 1)
+        }
 
         var thaina = new Person('Thainá', 20, 1.68)
-        thaina.initialize();
-        console.log(thaina.getName())
         console.log(thaina.getAge())
-        console.log(thaina.getHeight())
+        thaina.happyBirthday();
+        console.log(thaina.getAge())
 
         console.log(thaina);
     </script>
