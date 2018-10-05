@@ -24,11 +24,11 @@
                 return name
             }
 
-            this.getAge = function(){
-                returnage
+            this.getAge = function () {
+                return age
             }
 
-            this.getHeight = function(){
+            this.getHeight = function () {
                 return height
             }
 
@@ -36,17 +36,32 @@
                 name = _name
             }
 
-            this.setAge = function(_age){
+            this.setAge = function (_age) {
                 age = _age
             }
 
-            this.setHeight = function setHeight(_height){
+            this.setHeight = function setHeight(_height) {
                 height = _height
             }
         }
 
+        Person.static_method = function () {
+            console.log('This is my first static method')
+        }
+
+        Person.static_method()
+
+        Person.static_attr = 'This is my first static attribute'
+
+        console.log(Person.static_attr)
+
         var thaina = new Person()
-        thaina.sayHello(thaina.getName())
+        thaina.setName("Thainá")
+        thaina.setAge("20")
+        thaina.setHeight("1.68")
+        console.log(thaina.getName())
+        console.log(thaina.getAge())
+        console.log(thaina.getHeight())
 
         console.log(thaina);
     </script>
