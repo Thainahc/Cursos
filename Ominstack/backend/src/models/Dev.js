@@ -18,4 +18,4 @@ const DevSchema = new Schema({
         timestamps: true, // Criará duas colunas (createdAt e updatedAt), em cada registro
     });
 
-module.exports = ('Dev', DevSchema);
+module.exports = model('Dev', DevSchema);
