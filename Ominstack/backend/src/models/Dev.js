@@ -14,6 +14,14 @@ const DevSchema = new Schema({
         type: String,
         required: true
     },
+    likes: [{
+        type: Schema.Types.ObjectId, // Likes é um vetor, e possui um relacionamento entre a tabela Dev e o ID do usuário
+        ref: 'Dev'
+    }],
+    dislikes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Dev'
+    }],
 }, {
         timestamps: true, // Criará duas colunas (createdAt e updatedAt), em cada registro
     });
