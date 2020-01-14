@@ -17,7 +17,7 @@ for (let index = 0; index < usuarios.length; index++) {
 
     let usuarioNome = usuarios[index].nome
     let usuarioTecnologias = usuarios[index].tecnologias
-    let mensagem = `${usuarioNome} trabalha com ${usuarioTecnologias}`
+    let mensagem = `${usuarioNome} trabalha com ${usuarioTecnologias.join(", ")}`
 
     console.log(mensagem)
 
