@@ -13,30 +13,23 @@ const usuarios = [
     }
 ]
 
-for (let index = 0; index < usuarios.length; index++) {
+for (let usuario of usuarios) {
+    let mensagem = `${usuario.nome} trabalha com ${usuario.tecnologias.join(", ")}.`
 
-    let usuarioNome = usuarios[index].nome
-    let usuarioTecnologias = usuarios[index].tecnologias
-    let mensagem = `${usuarioNome} trabalha com ${usuarioTecnologias.join(", ")}`
-
-    console.log(mensagem)
-
-    if (checaSeUsuarioUsaCSS(usuarioTecnologias)) {
-        console.log(`${usuarioNome} usa CSS.`)
+    if (checaSeUsuarioUsaCSS(usuario.tecnologias)) {
+        mensagem += ` ${usuario.nome} trabalha com CSS.`
     }
     else {
-        console.log(`${usuarioNome} não usa CSS.`)
+        mensagem += ` ${usuario.nome} não trabalha com CSS.`
     }
+
+    console.log(mensagem)
 }
 
-function checaSeUsuarioUsaCSS(usuarioTecnologias) {
-    let usuarioUsaCSS = false;
-
-    for (let index = 0; index < usuarioTecnologias.length; index++) {
-        if (usuarioTecnologias[index] == 'CSS') {
-            usuarioUsaCSS = true
+function checaSeUsuarioUsaCSS(tecnologias) {
+    for (let tecnologia of tecnologias) {
+        if (tecnologia == 'CSS') {
+            return true
         }
     }
-
-    return usuarioUsaCSS
 }
