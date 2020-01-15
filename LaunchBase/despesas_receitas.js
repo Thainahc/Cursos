@@ -16,36 +16,32 @@ const usuarios = [
     }
 ]
 
-for (let index = 0; index < usuarios.length; index++) {
-    let usuarioNome = usuarios[index].nome
-    let usuarioReceitas = usuarios[index].receitas
-    let usuarioDespesas = usuarios[index].despesas
-    let usuarioSaldo = calculaSaldo(usuarioReceitas, usuarioDespesas)
+for (let usuario of usuarios) {
+    let saldo = calculaSaldo(usuario.receitas, usuario.despesas)
 
-    if (usuarioSaldo == 0) {
-        console.log(`${usuarioNome} possui saldo de ${usuarioSaldo}`)
+    if (saldo == 0) {
+        console.log(`${usuario.nome} possui saldo de ${saldo.toFixed(2)}`)
     }
-    else if (usuarioSaldo > 0) {
-        console.log(`${usuarioNome} possui saldo POSITIVO de ${usuarioSaldo}`)
+    else if (saldo > 0) {
+        console.log(`${usuario.nome} possui saldo POSITIVO de ${saldo.toFixed(2)}`)
     }
-    else if (usuarioSaldo < 0) {
-        console.log(`${usuarioNome} possui saldo NEGATIVO de ${usuarioSaldo}`)
+    else if (saldo < 0) {
+        console.log(`${usuario.nome} possui saldo NEGATIVO de ${saldo.toFixed(2)}`)
     }
 }
 
 function calculaSaldo(receitas, despesas) {
-    let totalReceitas = somaNumeros(receitas)
-    let totalDespesas = somaNumeros(despesas)
-    let saldo = totalReceitas - totalDespesas
-
-    return saldo
+    let somaReceitas = somaNumeros(receitas)
+    let somaDespesas = somaNumeros(despesas)
+    
+    return somaReceitas - somaDespesas
 }
 
 function somaNumeros(numeros) {
     let soma = 0
 
-    for (let index = 0; index < numeros.length; index++) {
-        soma += numeros[index]
+    for (let numero of numeros) {
+        soma += numero
     }
 
     return soma
