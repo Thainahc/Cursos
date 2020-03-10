@@ -42,9 +42,7 @@ function getAverageTransactionValue() {
         sum += transaction.value
     }
 
-    const average = sum / user.transactions.length
-
-    return average
+    return sum / user.transactions.length
 }
 
 function getTransactionsCount() {
