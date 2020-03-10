@@ -4,18 +4,35 @@ const user = {
     balance: 0
 }
 
+function isCredit(type) {
+    return type == "credit"
+}
+
+function isDebit(type) {
+    return type == "debit"
+}
+
 function createTransaction(transaction) {
     user.transactions.push(transaction)
 
-    if (transaction.type == "credit") {
+    if (isCredit(transaction.type)) {
         user.balance += transaction.value
     }
-    else if (transaction.type == "debit") {
+    else if (isDebit(transaction.type)) {
         user.balance -= transaction.value
     }
 }
 
 function getHigherTransactionByType(type) {
+    let higherValue = 0
+
+    for (transaction of user.transactions) {
+        if (transaction.type == type && transaction.value > higherValue) {
+            higherValue = transaction.value
+        }
+    }
+
+    return higherValue;
 }
 
 function getAverageTransactionValue() {
@@ -27,8 +44,6 @@ function getAverageTransactionValue() {
 
     const average = sum / user.transactions.length
 
-    console.log(average)
-
     return average
 }
 
@@ -37,10 +52,10 @@ function getTransactionsCount() {
     let debit = 0
 
     for (transaction of user.transactions) {
-        if (transaction.type == "credit") {
+        if (isCredit(transaction.type)) {
             credit++
         }
-        else if (transaction.type == "debit") {
+        else if (isDebit(transaction.type)) {
             debit++
         }
     }
@@ -55,6 +70,7 @@ createTransaction({ type: "debit", value: 30 })
 
 console.log(user.balance)
 
-getHigherTransactionByType()
+getHigherTransactionByType("credit")
+getHigherTransactionByType("debit")
 getAverageTransactionValue()
-console.log(getTransactionsCount())
+getTransactionsCount()
