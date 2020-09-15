@@ -18,7 +18,7 @@ body {
 header {
     padding: 30px;
     border-bottom: 1px solid #333;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(26, 25, 25, 0.1);
 }
 
 .links {
@@ -45,12 +45,22 @@ header {
 
 #wrapper img {
     height: 300px;
+    border-radius: 50%;
 }
 
 #wrapper h1 {
     font-size: 42px;
     line-height: 52px;
     font-weight: bold;
+}
+
+#wrapper h1 a {
+    color: white;
+}
+
+#wrapper h1 a:hover{
+    color: var(--color-purple);
+    transition: color 300ms;
 }
 
 #wrapper h2 {
@@ -76,6 +86,20 @@ header {
     font-size: 16px;
     line-height: 22px;
     opacity: 0.8;
+}
+
+#wrapper ul{
+    text-align: center;
+    margin-top: 8px;
+}
+
+#wrapper ul li{
+    font-size: 12px;
+    line-height: 22px;
+    display: inline;
+    margin: 0 8px;
+    font-weight: 500;
+    color: var(--color-purple)
 }
 
 #links-footer a {
