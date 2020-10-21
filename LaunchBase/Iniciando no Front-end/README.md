@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Desafio 2-1: Primeiro HTML & Desafio 2-2: Página de descrição
+  Desafio 2-1: Primeiro HTML & Desafio 2-2: Página de descrição & Página de posts e iframe & Desafio 2-3: Página de posts e iframe 
 </h3>
 
 <p align="center">
@@ -25,7 +25,7 @@
 
 ## :rocket: Sobre o desafio
 
-Criar um arquivo html que contenha um [favicon](favicon.ico) e um header com 4 links: Comunidade, Email, Telefone e Sobre.
+Criar um arquivo html que contenha um [favicon](favicon.ico) e um header com 3 links: Sobre, Rocketseat e Conteúdos.
 
 ### Favicon
 
@@ -37,18 +37,28 @@ O favicon é o ícone que aparece na aba do navegador. O arquivo está disponív
 
 ### Links
 
-- `Comunidade`: Link que deve apontar para o convite da comunidade aberta da rocketseat `(https://discordapp.com/invite/gCRAFhc)`
+- `Sobre`: Página contendo:
+   - Sua imagem de perfil
+   - Seu nome
+   - Uma breve descrição sobre você
+   - Links para as redes sociais, telefone e email
 
-- `Email`: Link que deve chamar o comando de enviar email para o destinatário `oi@rocketseat.com.br`. Dica: utilize o comando `mailto` dentro do `href`;
-
-- `Telefone`: Link que deve chamar o comando de realizar uma ligação para o número `+5547992078767`. Dica: utilize o comando `tel` dentro do `href`;
-
-- `Sobre`: Abre uma nova página contendo:
+- `Rocketseat`: Página contendo:
     - Uma imagem da logo da empresa
     - O nome da empresa
     - Uma breve descrição da empresa
     - Uma lista com as principais tecnologias utilizadas. Dica: utilize a tag `ul` para lista e `li` para o item da lista.
-    - Links para as redes sociais da empresa (Github, Instagram e Facebook)
+    - Links para as redes sociais da empresa (Github, Instagram, Facebook e Comunidade)
+
+- `Conteúdos`: Página contendo
+    - Título da página
+    - Grid com 3 colunas e 1 linha onde serão apresentados os cards dos posts do blog da Rocketseat
+    - Informações do card:
+      - Imagem de destaque do Post (Tutorial de como pegar os links das imagens)
+      - Título do Post
+      - Autor do Post
+      - Tempo de Leitura
+    - Modal: deve conter um iframe que busca a página do post, com um botão maximizar e um botão fechar.
 
 ### Estilização
 
