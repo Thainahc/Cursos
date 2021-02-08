@@ -3,7 +3,9 @@
 </h1>
 
 <h3 align="center">
-  Desafio 2-1: Primeiro HTML & Desafio 2-2: Página de descrição & Página de posts e iframe & Desafio 2-3: Página de posts e iframe 
+  Desafio 2-1: Primeiro HTML & <br>
+  Desafio 2-2: Página de descrição & <br>
+  Desafio 2-3: Página de posts e iframe 
 </h3>
 
 <p align="center">
